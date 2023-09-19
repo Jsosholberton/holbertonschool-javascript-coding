@@ -6,11 +6,10 @@ request.get(url, (err, response, body) => {
   if (err) {
     console.log(err);
   }
-  const json_file = JSON.parse(body);
   let len = 0;
-  for ( const movie of json_file.results ) {
-    for ( const character of movie.characters ) {
-      if ( character.includes(18) ) {
+  for (const movie of JSON.parse(body).results) {
+    for (const character of movie.characters) {
+      if (character.includes(18)) {
         len++;
       }
     }
