@@ -13,8 +13,7 @@ request.get(url, (err, response, body) => {
     if (task.completed) {
       if (!dictTask[task.userId]) {
         dictTask[task.userId] = 1;
-      }
-      else {
+      } else {
         dictTask[task.userId]++;
       }
     }
