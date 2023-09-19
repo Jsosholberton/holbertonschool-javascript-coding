@@ -5,7 +5,7 @@ character_id = 18;
 
 request.get(url, (err, response, body) => {
   json_file = JSON.parse(body)
-  var len = 0;
+  let len = 0;
   for ( const movie of json_file.results ) {
     for ( const character in movie.characters ) {
       if ( character == character_id ) {
