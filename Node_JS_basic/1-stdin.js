@@ -1,11 +1,10 @@
 function stdin() {
   console.log('Welcome to Holberton School, what is your name?');
-  var input = process.stdin;
-  input.setEncoding('utf-8');
-  input.on('data', function (data) {
-    console.log(`Your name is: ${data}`);
+  const input = process.stdin;
+  input.on('data', (data) => {
+    console.log(`Your name is: ${data.toString().trim()}`);
   });
-  input.on('end', function () {
+  input.on('end', () => {
     console.log('This important software is now closing');
   });
 }
