@@ -13,8 +13,6 @@ class StudentController {
             sweListStudents.push(student[0]);
           }
         }
-        csListStudents.sort((a, b) => a.localeCompare(b, 'en', { sensitivity: 'base' }));
-        sweListStudents.sort((a, b) => a.localeCompare(b, 'en', { sensitivity: 'base' }));
         res.send(`This is the list of our students\nNumber of students in CS: ${csListStudents.length}. List: ${csListStudents.join(', ')}\nNumber of students in SWE: ${sweListStudents.length}. List: ${sweListStudents.join(', ')}`);
       })
       .catch(() => {
