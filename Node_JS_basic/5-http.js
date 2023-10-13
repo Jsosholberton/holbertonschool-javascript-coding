@@ -9,9 +9,9 @@ const app = http.createServer((req, res) => {
     res.end();
   } else if (Url === '/students') {
     const filePath = process.argv[2];
+    res.write('This is the list of our students\n');
     countStudents(filePath)
       .then((data) => {
-        res.write('This is the list of our students\n');
         res.write(data.join('\n'));
         res.end();
       })
